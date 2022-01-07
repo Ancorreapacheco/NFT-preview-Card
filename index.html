@@ -13,29 +13,51 @@
     />
 
     <link rel="stylesheet" href="/css/nft-styyle.css" />
+    <!-- Fuente -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | NFT preview card component</title>
   </head>
   <body>
-    <main>
-      <section>
-        <img src="/images/image-equilibrium.jpg" alt="Equilibrim NFT" />
-        <h1>Equilibrium #3429</h1>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
+    <main class="container">
+      <section class="card-container">
+        <div class="img-container">
+          <img
+            class="img-nft"
+            clas="imagen"
+            src="/images/image-equilibrium.jpg"
+            alt="Equilibrim NFT"
+          />
+        </div>
+        <h1 class="title-nft">Equilibrium #3429</h1>
+        <p class="desc-nft">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
         <img src="/images/icon-ethereum.svg" alt="icono Ethereum" />
-        <p>0.041 ETH</p>
-        <p>3 days left</p>
+        <div>
+          <p>0.041 ETH</p>
+          <p>3 days left</p>
+        </div>
+
         <hr />
         <img src="/images/image-avatar.png" alt="imagen del usuario" />
         <p>Creation of Jules Wyvern</p>
       </section>
+
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div> -->
     </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <h1 class="title-nft">Prueba</h1>
   </body>
 </html>
