@@ -22,72 +22,131 @@
 
 - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
 - Weights: 300, 400, 600
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
  */
 
-* {
-  color: white;
+:root {
+  --primaryOne: hsl(215, 51%, 70%);
+  --primaryTwo: hsl(178, 100%, 50%);
+  --neutralOne: hsl(217, 54%, 11%);
+  --neutralTwo: hsl(216, 50%, 16%);
+  --neutralThree: hsl(215, 32%, 27%);
+  --neutralFour: hsl(0, 0%, 100%);
+  --fontPrimary: "Outfit", sans-serif;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+/* -----------------------SNIPPETS GENERALES--------------------- */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+*,
+*:before,
+*after {
+  box-sizing: inherit;
 }
 
 body {
-  background-color: hsl(217, 54%, 11%);
-  box-sizing: border-box;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--fontPrimary);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--neutralOne);
 }
+
+/* --------------------------GLOBALES----------------------------- */
 
 .container {
-  height: 100vh;
-  width: 1440px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 100px;
-  padding: 50px;
-}
-
-.card-container {
-  height: auto;
-  width: 350px;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  flex-direction: column;
-  border-radius: 15px;
-  background-color: hsl(216, 50%, 16%);  
-  margin: 10px;
-  padding: 20px;
-  
-}
-
-.img-container {
-  display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  max-width: 120rem;
+  width: 90%;
   margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ------------------------------------------------------ */
+
+.card .contenedor {
+  background-color: var(--neutralTwo);
+  margin: 3.5rem 2rem;
+  border: 1rem solid var(--neutralTwo);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.card .image-nft {
+  background-image: url(/images/image-equilibrium.jpg);
+  height: 30rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid var(--neutralTwo);
+  border-radius: 1rem;
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  color: var(--neutralFour);
+}
+
+.card p{
+  color:var(--neutralThree);
+  font-size: 1.8rem;
+  margin: 1.2rem 0;
+}
+
+.card .details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--neutralThree) ;
+  padding-bottom: 1rem;
+
+}
+
+.card .eth-icon {
+  display: inline;
+}
+
+.card .eth-price {
+  display: inline;
+  color:var(--primaryTwo);
+  font-weight: 900;
+}
+
+.card .details p{
+  display: inline;
+}
+.card .details div{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:1rem;
+}
+.card .autor{
+  display: flex;
+  align-items: center;
+  gap:2rem;
+}
+
+.card .autor-icon{
+  width: 4rem;
   
 }
 
-.img-nft {
-  border-radius: 12px;
-  width: 100%; 
-  }
+.card .autor-name{
+  color:var(--neutralFour);
 
-.title-nft{  
-  align-self: flex-start;
-  font-size: 24px;
-  font-weight:600;
-  color: white;
-}
-
-.desc-nft{
-  color: hsl(215, 52%, 70%) ;
-  font-size: 18px;
 }
