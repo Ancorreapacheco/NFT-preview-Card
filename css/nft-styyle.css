@@ -34,6 +34,7 @@ The designs were created to the following widths:
 :root {
   --primaryOne: hsl(215, 51%, 70%);
   --primaryTwo: hsl(178, 100%, 50%);
+  --primaryTwoG: hsl(178, 100%, 50%, 0.6);
   --neutralOne: hsl(217, 54%, 11%);
   --neutralTwo: hsl(216, 50%, 16%);
   --neutralThree: hsl(215, 32%, 27%);
@@ -46,6 +47,7 @@ The designs were created to the following widths:
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  height: 100%;
 }
 
 *,
@@ -59,15 +61,10 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   background-color: var(--neutralOne);
+  height: 100%;
 }
 
 /* --------------------------GLOBALES----------------------------- */
-
-.container {
-  max-width: 120rem;
-  width: 90%;
-  margin: 0 auto;
-}
 
 img {
   max-width: 100%;
@@ -77,6 +74,12 @@ img {
 
 /* ------------------------------------------------------ */
 
+.card {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
 .card .contenedor {
   background-color: var(--neutralTwo);
   margin: 3.5rem 2rem;
@@ -85,15 +88,39 @@ img {
   padding: 1rem;
 }
 
+@media (min-width: 768px) {
+  
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card .contenedor {
+    max-width: 375px;
+    max-height: 650px;
+    margin: 0 auto;
+    
+  }
+}
+
 .card .image-nft {
   background-image: url(/images/image-equilibrium.jpg);
-  height: 30rem;
   width: 100%;
+  padding-top: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: 2px solid var(--neutralTwo);
   border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card .image-nft:hover {
+  background-image: url(/images/icon-view.svg),
+    linear-gradient(var(--primaryTwoG), var(--primaryTwoG)),
+    url(/images/image-equilibrium.jpg), url(/images/icon-view.svg);
+  background-size: 5rem, cover, cover;
+  cursor: pointer;
 }
 
 .card h1 {
@@ -101,19 +128,23 @@ img {
   color: var(--neutralFour);
 }
 
-.card p{
-  color:var(--neutralThree);
+.card h1:hover {
+  color: var(--primaryTwo);
+  cursor: pointer;
+}
+
+.card p {
+  color: var(--neutralThree);
   font-size: 1.8rem;
   margin: 1.2rem 0;
 }
 
-.card .details{
+.card .details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--neutralThree) ;
+  border-bottom: 1px solid var(--neutralThree);
   padding-bottom: 1rem;
-
 }
 
 .card .eth-icon {
@@ -122,31 +153,34 @@ img {
 
 .card .eth-price {
   display: inline;
-  color:var(--primaryTwo);
+  color: var(--primaryTwo);
   font-weight: 900;
 }
 
-.card .details p{
+.card .details p {
   display: inline;
 }
-.card .details div{
+.card .details div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
 }
-.card .autor{
+.card .autor {
   display: flex;
   align-items: center;
-  gap:2rem;
+  gap: 2rem;
 }
 
-.card .autor-icon{
+.card .autor-icon {
   width: 4rem;
-  
 }
 
-.card .autor-name{
-  color:var(--neutralFour);
+.card .autor-name {
+  color: var(--neutralFour);
+}
 
+.card .autor-name:hover {
+  color: var(--primaryTwo);
+  cursor: pointer;
 }
