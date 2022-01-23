@@ -104,7 +104,7 @@ img {
 }
 
 .card .image-nft {
-  background-image: url(/images/image-equilibrium.jpg);
+  background-image: url(../images/image-equilibrium.jpg);
   width: 100%;
   padding-top: 100%;
   background-repeat: no-repeat;
@@ -116,9 +116,9 @@ img {
 }
 
 .card .image-nft:hover {
-  background-image: url(/images/icon-view.svg),
+  background-image: url(../images/icon-view.svg),
     linear-gradient(var(--primaryTwoG), var(--primaryTwoG)),
-    url(/images/image-equilibrium.jpg), url(/images/icon-view.svg);
+    url(../images/image-equilibrium.jpg);
   background-size: 5rem, cover, cover;
   cursor: pointer;
 }
